@@ -1,0 +1,56 @@
+---
+layout: default
+---
+
+<a class="btn" href= "{{ site.url }}" >
+  Home
+</a>
+{% if page.image.feature %}
+<div class="post-image-feature">
+  <img class="feature-image" src=
+  {% if page.image.feature contains 'https' or page.image.feature contains 'http' %}
+  "{{ page.image.feature }}"
+  {% else %}
+  "/assets/{{ page.image.feature }}"
+  {% endif %}
+  alt="{{ page.title }} feature image">
+
+  {% if page.image.credit %}
+  <span class="image-credit">Photo Credit: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></span>
+  {% endif %}
+</div><!-- /.image-wrap -->
+{% endif %}
+
+
+<div id="post">
+  <header class="post-header">
+    <h1 title="{{ page.title }}">{{ page.title }}</h1>
+    <span class="post-meta">
+      <span class="post-date">
+        {{ page.date | date: "%-d %b %Y" | upcase }}
+      </span>
+      •
+      {% include read_time.html %}
+    </span>
+
+  </header>
+
+  <article class="post-content">
+    {{ content }}
+  </article>
+</div>
+
+<div class="clear share-buttons">
+  <b>Share on: </b><span>
+    <a href="https://twitter.com/intent/tweet?text={{ site.url }}{{ page.url }}" class="twitter" title="Share on Twitter"><i class="fa fa-twitter"></i><span></span></a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" class="facebook" title="Share on Facebook"><i class="fa fa-facebook"></i><span></span></a>
+    <a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" class="google-plus" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span></span></a>
+    <a href="https://news.ycombinator.com/submitlink?u={{ site.url }}{{ page.url }}" class="hacker-news" title="Share on Hacker News"><i class="fa fa-hacker-news"></i><span></span></a>
+    <a href="https://www.reddit.com/submit?url={{ site.url }}{{ page.url }}" class="reddit" title="Share on Reddit"><i class="fa fa-reddit"></i><span></span></a>
+  </span>
+</div><!-- end share-buttons -->
+
+<!-- {% if site.owner.disqus-shortname and page.comments == true %} -->
+<!-- <div id="disqus_thread"></div> -->
+<!-- {% include disqus.html %} -->
+<!-- {% endif %} -->

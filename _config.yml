@@ -1,0 +1,79 @@
+#
+###################################
+# Site wide configuration
+####################################
+#
+title:
+email:
+description:
+url: # the base hostname & protocol for your site
+keywords: ["blog", "jekyll"]
+
+#
+###################################
+# Jekyll configuration
+####################################
+#
+timezone:          India/Delhi
+markdown:          kramdown
+highlighter:       rouge
+excerpt_separator: <!--more-->
+permalink:         /articles/:year-:month/:title
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  enable_coderay: false
+
+#
+###################################
+# Site Owner configuration
+####################################
+#
+owner:
+  name:
+  nickname:
+  avatar: avatar.png
+  bio:
+  email:
+  disqus-shortname: #username
+  discord: #user url
+  twitter: #username
+  facebook: #username
+  google:
+    plus: #username
+    analytics: # id
+    verify:
+    ad-client:
+    ad-slot:
+  bing-verify:
+  github:
+  gitlab:
+  stackoverflow:  #123456/username   from a "https://stackoverflow.com/users/123456/username" link
+  unix:
+  cs:
+  # riot:
+  linkedin: #username
+  skype: #username
+  xing: #username
+  instagram: #username
+  lastfm: #username
+  tumblr: #username
+  pinterest: #username
+  foursquare: #username
+  steam: #username
+  dribbble: #username
+  youtube: # username
+  twitch: # username
+  soundcloud: # username
+  weibo: #username
+  flickr: #username
+  500px: #username
+  codepen: #username
+  telegram: #username
+  debian:
+  0xacab:
+  reddit: #username
+

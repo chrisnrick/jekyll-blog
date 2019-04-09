@@ -1,0 +1,10 @@
+## jekyll
+_site/
+.sass-cache/
+.swp/
+*.swp
+.directory
+Thumbs.db
+_drafts
+.ruby-version
+Gemfile.lock

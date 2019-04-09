@@ -1,0 +1,23 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="Personal website and blog of Vipul">
+
+  <meta property="og:title" content="Personal website &amp; blog of Vipul (aka finn)">
+  <meta property="og:description" content="A blog about experiences and life">
+  <meta property="og:type" content="website">
+  <!-- CSS files -->
+  <link rel="stylesheet" href="/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.url }}" />
+
+  <!-- Icons -->
+  <!-- 16x16 -->
+  <!--link rel="shortcut icon" href="/favicon.ico"-->
+  <!-- 32x32 -->
+</head>
